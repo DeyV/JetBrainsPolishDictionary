@@ -1,0 +1,2 @@
+JetBrainsPolishDictionary
+=========================
