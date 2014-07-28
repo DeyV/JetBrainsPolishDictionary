@@ -1,2 +1,36 @@
 JetBrainsPolishDictionary
 =========================
+
+
+# Package contains files:
+
+ - polish.dic - official aspell polish dict in utf
+ - polish.nopl.dic - The some like above but all non ascii chars converted to ascii
+	
+ - **polish.finall.dic** - *Recommend version* - (polish chars + ascii version of words)
+ 	Sorted and uniq filtered 
+ 	
+ 	This version is recommended when You use polish words in functions, class and variables names, but without local characters 
+
+
+
+
+Build with linux command:
+========================
+
+	aspell --lang pl dump master | aspell --lang pl expand | tr ' ' '\n' > polish.dic
+
+
+# Finall file 
+
+	iconv -f utf8 -t ascii//TRANSLIT < polish.dic  > polish.nopl.dic
+
+	cat polish.dic polish.nopl.dic | sort -u > polish.finall.dic
+	
+	
+	
+
+
+## Based on 
+
+    http://lpodolski.com/blog/polish-spell-checking-for-phpstorm/
