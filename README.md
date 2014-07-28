@@ -27,7 +27,9 @@ Build with linux command:
 
 	cat polish.dic polish.nopl.dic | sort -u > polish.final.dic
 	
-	
+
+# Problems
+  - Current version PhpStorm (8.0 beta) require change in Xmx (to Xmx756m for example) to work correctly with this dictionary on big project
 	
 
 
